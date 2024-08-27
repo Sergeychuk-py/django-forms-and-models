@@ -5,17 +5,16 @@
     <title>Свясь формы и модели</title>
 </head>
 <body>
-<div class="container">
-    {% include 'app_forms/final.html' %}
+<div >
+    {% include 'app_forms/messages.html' %}
     <form method="POST">
-      <fieldset>
-        <legend>Form</legend>
+
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">
         Submit
         </button>
-      </fieldset>
+
     </form>
 </div>
 </body>
