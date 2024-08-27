@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Свясь формы и модели</title>
+</head>
+<body>
+<div class="container">
+    {% include 'app_forms/final.html' %}
+    <form method="POST">
+      <fieldset>
+        <legend>Form</legend>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">
+        Submit
+        </button>
+      </fieldset>
+    </form>
+</div>
+</body>
+</html>
